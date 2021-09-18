@@ -1,0 +1,2 @@
+from 10.100.14.0/24 lookup bgp4
+from 10.47.142.0/24 lookup bgp4
