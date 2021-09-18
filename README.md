@@ -1,9 +1,9 @@
 # DNS-Anycast
 1. Add loopback interface lo:0 for DNS Anycast IP Address:
-#cd /etc/sysconfig/network-scripts
-#vi ifcfg-lo:0
+# cd /etc/sysconfig/network-scripts
+# vi ifcfg-lo:0
 Add all information in config file loopback-interface into ifcfg-lo:0
-#systemctl restart network
+# systemctl restart network
 
 2. Assign IP Address of your Server's interfaces:
 
@@ -27,15 +27,15 @@ Example:
 + binutils
 - Download BIRD package & extract:
 
-#wget https://bird.network.cz/download/bird-2.0.7.tar.gz
-#tar -xvf bird-2.0.7.tar.gz
+# wget https://bird.network.cz/download/bird-2.0.7.tar.gz
+# tar -xvf bird-2.0.7.tar.gz
 - Installing:
 
-#cd bird-2.0.7
-#./configure
-#make
-#make install
-#bird
+# cd bird-2.0.7
+# ./configure
+# make
+# make install
+# bird
 - Add BIRD config: bird.conf
 
 4. Allow IPv6 & forwarding port on this DNS Anycast Server:
@@ -44,7 +44,7 @@ Example:
 --> Reboot the server to apply new config
 5. Allow IPv6 & Forwarding port
 Add some lines into /etc/sysctl.conf
-#vi /etc/sysctl.conf
+# vi /etc/sysctl.conf
 net.ipv4.conf.default.forwarding = 1
 net.ipv6.conf.default.autoconf = 1
 net.ipv6.conf.all.forwarding = 1
