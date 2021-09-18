@@ -59,16 +59,7 @@ Add some lines into /etc/sysctl.conf
 
 #vi /etc/sysctl.conf
 
-net.ipv4.conf.default.forwarding = 1
-net.ipv6.conf.default.autoconf = 1
-net.ipv6.conf.all.forwarding = 1
-net.ipv6.conf.all.disable_ipv6 = 0
-net.ipv6.conf.default.autoconf = 1
-net.ipv6.conf.default.forwarding = 1
-net.ipv6.conf.default.diable_ipv6 = 0
-net.ipv6.conf.all.accept_ra = 1
-net.ipv6.conf.default.accept_ra = 1
-
+#sysctl --system reload
 
 6. Reboot
 
