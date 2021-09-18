@@ -1,0 +1,2 @@
+from 2001:de8:47::/64 lookup bgp6
+from 2001:dc8:142::/48 lookup bgp6
