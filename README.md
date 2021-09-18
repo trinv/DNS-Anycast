@@ -27,20 +27,20 @@ Example:
 + binutils
 - Download BIRD package & extract:
 
-# wget https://bird.network.cz/download/bird-2.0.7.tar.gz
-# tar -xvf bird-2.0.7.tar.gz
+#wget https://bird.network.cz/download/bird-2.0.7.tar.gz
+#tar -xvf bird-2.0.7.tar.gz
 - Installing:
 
-# cd bird-2.0.7
-# ./configure
-# make
-# make install
-# bird
+#cd bird-2.0.7
+#./configure
+#make
+#make install
+#bird
 - Add BIRD config: bird.conf
 
 4. Allow IPv6 & forwarding port on this DNS Anycast Server:
 
-# vi /etc/iproute2/rt_tables (rt_tables configure file)
+#vi /etc/iproute2/rt_tables (rt_tables configure file)
 --> Reboot the server to apply new config
 5. Allow IPv6 & Forwarding port
 Add some lines into /etc/sysctl.conf
@@ -56,3 +56,4 @@ net.ipv6.conf.all.accept_ra = 1
 net.ipv6.conf.default.accept_ra = 1
 
 6. Reboot
+
