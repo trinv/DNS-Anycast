@@ -1,0 +1,13 @@
+## /lib/systemd/system/bird.service
+
+[Unit]
+Description=BIRD Internet Routing Daemon
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/local/sbin/bird
+ExecReload=/usr/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target
