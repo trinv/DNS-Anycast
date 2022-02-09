@@ -27,8 +27,8 @@
 + GNU Bison
 + GNU M4
 + Flex
-+ ncurses library
-+ GNU Readline library
++ ncurses library: yum install ncurses-devel
++ GNU Readline library: yum install readline-devel
 + libssh library (optional, for RPKI-Router protocol)
 + binutils
 ```
