@@ -8,8 +8,7 @@ echo "Stopping Anycast..."
 #systemctl stop bird
 /etc/init.d/bird stop
 
-echo "$date - Stopped - Node Anycast DNS has stopped working, BGP has already been shutdown, Please check the system right now." | m
-mailx -s "Alert: Stopped - Node Anycast DNS has stopped working" -r Anycast_Monitor dns-admin@localhost
+echo "$date - Stopped - Node Anycast DNS has stopped working, BGP has already been shutdown, Please check the system right now." | mailx -s "Alert: Stopped - Node Anycast DNS has stopped working" -r Anycast_Monitor dns-admin@localhost
 
 else echo "$date: Everything's good... Do nothing..."
 
