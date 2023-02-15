@@ -1,0 +1,16 @@
+#!/bin/bash
+DNSUP=`/usr/bin/dig @<server_ip> localhost. A +short`
+#date=`date +%Y%m%d`
+date=`date`
+if [ "$DNSUP" != "127.0.0.1" ];
+then
+echo "Stopping Anycast..."
+#systemctl stop bird
+/etc/init.d/bird stop
+
+echo "$date - Stopped - Node Anycast DNS has stopped working, BGP has already been shutdown, Please check the system right now." | m
+mailx -s "Alert: Stopped - Node Anycast DNS has stopped working" -r Anycast_Monitor dns-admin@localhost
+
+else echo "$date: Everything's good... Do nothing..."
+
+fi
